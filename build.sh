@@ -1,4 +1,4 @@
 #!/bin/sh
-mkdir -p release-build
-cmake -S . -B release-build
-cmake --build release-build
+mkdir -p build-release
+cmake -S . -B build-release
+cmake --build build-release

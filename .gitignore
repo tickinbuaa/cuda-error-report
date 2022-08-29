@@ -1,2 +1,5 @@
-release-build
+build-release
+build-debug
+cmake-build-release
+cmake-build-debug
 .idea
