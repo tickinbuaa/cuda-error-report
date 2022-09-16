@@ -5,11 +5,12 @@ include(FetchContent)
 set(CMAKE_CUDA_STANDARD 11)
 
 if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
-    set(CMAKE_CUDA_ARCHITECTURES 75)
+    set(CMAKE_CUDA_ARCHITECTURES 75;86)
 endif()
 
-add_executable(CudaTest main.cu)
+message(STATUS "Configure for cuda architecture ${CMAKE_CUDA_ARCHITECTURES}")
 
+add_executable(CudaTest src/main.cu)
 target_compile_options(CudaTest PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
         -O3 -lineinfo
         >)
